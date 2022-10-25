@@ -319,9 +319,12 @@
   border-radius: 10px;
  }
 
- form h3{
+ #header{
   font-family: 'Cantata One', serif;
   color: black;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
   font-weight: 800;
   margin-bottom: 20px;
  }
