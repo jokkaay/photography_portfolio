@@ -1,0 +1,351 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html, body{
+    width: 100%;
+    overflow-x: hidden;
+  }
+  body{
+    overflow-y: hidden;
+    position: relative;
+    background-color: black;
+  }
+ 
+  
+  nav{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    min-height: 8vh;   
+    z-index: 10;
+    
+  }
+
+  .logo{
+    position: relative;
+    font-size: 27px;
+    font-family: 'Bodoni Moda', serif;
+    letter-spacing: 4px;
+    color: white;
+    z-index: 10;
+  }
+
+  .nav_links{
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+  }
+
+  .nav_links li{
+    list-style: none;
+    
+  }
+
+  .nav_links a{
+    text-decoration: none;
+    font-family: 'Cantata One', serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: rgb(255, 255, 255);
+    
+  }
+
+  .burger div{
+     width: 25px;
+     height: 3px;
+     background-color: rgb(255, 255, 255);
+     margin: 5px;
+     transition: all 0.3s ease;
+  }
+
+  .burger{
+    display: none;
+    cursor: pointer;
+  }
+ 
+ @media screen and (max-width:1024px){
+  .nav_links{
+    width:60%;
+  }
+ }
+
+
+  @media screen and (max-width:760px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav_links{
+        position: absolute;
+        top: 0px;
+        height: 230px;
+        top: 8vh;
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateY(-150%);
+        transition: transform 0.5s ease-in;
+        z-index: 1;
+        
+    }
+    .nav_links li{
+        opacity: 0;
+       
+    }
+    .burger{
+        display: block;
+    }
+    
+    .slideshow-container img{
+        margin-top: 40%;
+    }
+  }
+
+
+  .nav_active{
+    transform: translateY(0%);
+    z-index: 1;
+    
+  }
+
+  .nav_links a:hover{
+    color: grey;
+  }
+
+  @keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 76vh;
+  position: relative;
+  margin: auto;
+  
+  
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 58%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: .2s;
+}
+
+@keyframes fade {
+  from {opacity: .7}
+  to {opacity: 1}
+}
+.popup-image img{
+  position: absolute;
+  width: 33%;
+  top: 50%; left: 50%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+.popup-image{
+  position: fixed;
+  top: 0; left: 0;
+  background: rgba(0, 0, 0, .9);
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: none;
+}
+
+.popup-image span{
+  position: absolute;
+  top: 0; right: 10px;
+  font-size: 40px;
+  font-weight: bolder;
+  color:white;
+  cursor: pointer;
+  z-index: 100;
+}
+
+@media screen and (max-width:1300px){
+  .popup-image img{
+    width: 38%;
+  }
+ 
+  
+}
+@media screen and (max-width:1000px){
+  .popup-image img{
+    width: 50%;
+  }
+ 
+}
+
+@media screen and (max-width:700px){
+  .popup-image img{
+    width: 70%;
+  }
+}
+
+
+.portfolio{
+  display: flex;
+}
+
+
+
+.image-gallery{
+  position: relative;
+  top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 20px;
+  width:100%;
+  justify-content: center;
+  list-style: none;
+  float: left;
+ 
+}
+
+.image-gallery img{
+  object-fit: cover;
+  width: 100%;
+  height: 600px;
+  vertical-align: middle;
+  float: left;
+ }
+ 
+ .about{
+  position: relative;
+  display: flex;
+  margin-top: 5%;
+  width:100%;
+  height: 100vh;
+  padding: 78px 0px;
+ }
+ .about img{
+  width: 35%;
+ }
+
+ .about-text{
+  width: 50%;
+  color: white;
+ }
+ .main{
+  width: 1130px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+ }
+
+ .about-text h1{
+  font-family: 'Bodoni Moda', serif;
+  font-size: 25px;
+ }
+ .about-text p{
+  position: relative;
+  top: 20px;
+  font-family: 'Cantata One', serif;
+  font-size: 15px;
+ }
+
+ .contact{
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ form{
+  background: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  padding: 2vw 4vw;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+ }
+
+ form h3{
+  font-family: 'Cantata One', serif;
+  color: black;
+  font-weight: 800;
+  margin-bottom: 20px;
+ }
+
+ form input, form textarea{
+  border: 0;
+  margin: 10px 0;
+  padding: 20px;
+  outline: none;
+  background: hsl(0, 43%, 95%);
+  font-size: 16px;
+ }
+
+ form button{
+  padding: 15px;
+  color: white;
+  background: rgb(0, 0, 0);
+  font-size: 18px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  width: 30%;
+  margin-left: auto;
+  border-radius: 5px;
+ }
+
+ 
