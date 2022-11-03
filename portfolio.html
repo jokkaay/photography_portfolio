@@ -40,84 +40,89 @@
       </div>
     </nav>
     
-    <div class="portfolio">
+    <div class="portfolio" onclick="close()">
         <ul class="image-gallery">
             <li>
-               <img class="image" src="imgs/17.jpg"/>
+               <img src="imgs/17.jpg" onclick="FullView(this.src)"/>
             </li>
             <li>
-               <img src="imgs/33.jpg"/>
+               <img src="imgs/33.jpg" onclick="FullView(this.src)"/>
             </li>
             <li>
-               <img src="imgs/16.jpg"/>
+               <img src="imgs/16.jpg" onclick="FullView(this.src)"/>
             </li>
             <li>
-               <img src="imgs/8.jpg"/>
+               <img src="imgs/8.jpg" onclick="FullView(this.src)"/>
             </li>
             <li>
-               <img src="imgs/4.jpg"/>
+               <img src="imgs/4.jpg" onclick="FullView(this.src)"/>
             </li>
             <li>
-               <img src="imgs/31.jpg"/>
+               <img src="imgs/31.jpg" onclick="FullView(this.src)"/>
             </li>
             <li>
-               <img src="imgs/45.jpg"/>
+               <img src="imgs/45.jpg" onclick="FullView(this.src)"/>
             </li> 
             <li>
-               <img src="imgs/41.jpg"/>
+               <img src="imgs/41.jpg" onclick="FullView(this.src)"/>
             </li>
             <li>
-               <img src="imgs/38.jpg"/>
+               <img src="imgs/38.jpg" onclick="FullView(this.src)"/>
             </li>    
             <li>
-               <img src="imgs/23.jpg"/>
+               <img src="imgs/23.jpg" onclick="FullView(this.src)"/>
             </li>
             <li>
-               <img src="imgs/9.jpg"/>
+               <img src="imgs/9.jpg" onclick="FullView(this.src)"/>
             </li>
             <li>
-                <img src="imgs/10.jpg"/>
+                <img src="imgs/10.jpg" onclick="FullView(this.src)"/>
              </li>
              <li>
-                <img src="imgs/47.jpg">
+                <img src="imgs/47.jpg" onclick="FullView(this.src)"/>
              </li>
              <li>
-                <img src="imgs/25.jpg">
+                <img src="imgs/25.jpg" onclick="FullView(this.src)"/>
              </li>
              <li>
-                <img src="imgs/35.jpg">
+                <img src="imgs/35.jpg" onclick="FullView(this.src)"/>
              </li>
              
             <li>
-               <img src="imgs/29.jpg"/>
+               <img src="imgs/29.jpg" onclick="FullView(this.src)"/>
             </li>
             <li>
-                <img src="imgs/5.jpg"/>
+                <img src="imgs/5.jpg" onclick="FullView(this.src)"/>
              </li>
              <li>
-                <img src="imgs/26.jpg"/>
+                <img src="imgs/26.jpg" onclick="FullView(this.src)"/>
              </li>
             <li>
-                <img src="imgs/30.jpg"/>
+                <img src="imgs/30.jpg" onclick="FullView(this.src)"/>
              </li>
              <li>
-                <img src="imgs/12.jpg"/>
+                <img src="imgs/12.jpg" onclick="FullView(this.src)"/>
              </li>
              <li>
-                <img src="imgs/43.jpg"/>
+                <img src="imgs/43.jpg" onclick="FullView(this.src)">
              </li>
              <li>
-                <img src="imgs/13.jpg"/>
+                <img src="imgs/13.jpg" onclick="FullView(this.src)"/>
              </li>
             <li>
-                <img src="imgs/19.jpg"/>
+                <img src="imgs/19.jpg" onclick="FullView(this.src)"/>
              </li>
              <li>
-                <img src="imgs/3.jpg"/>
+                <img src="imgs/3.jpg" onclick="FullView(this.src)"/>
              </li>
          </ul> 
-                             
-      </div>
+   </div>
+
+   <div id="FullImageView" onclick="CloseFullView()">
+          
+      <img id="FullImage" onclick="CloseFullView()">
+      
+   </div>
     <script src='app.js'></script>
     
 </body>

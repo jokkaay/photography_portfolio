@@ -53,3 +53,14 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+
+function FullView(ImgLink){
+  document.getElementById("FullImage").src = ImgLink;
+  document.getElementById("FullImageView").style.display = "block";
+};
+
+function CloseFullView(){
+  document.getElementById("FullImageView").style.display = "none";
+};
+ 
